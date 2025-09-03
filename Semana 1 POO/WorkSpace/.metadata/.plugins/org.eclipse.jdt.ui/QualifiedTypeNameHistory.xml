@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.mx.Persona.Persona"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.mx.Celular.Implementacion"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.mx.Celular.Celular"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="com.mx.Empleado.Empleado"/>
+    <fullyQualifiedTypeName name="Implementacion.ImplementacionGenerica"/>
+    <fullyQualifiedTypeName name="com.mx.Entidades.Computadora"/>
+    <fullyQualifiedTypeName name="Implementacion.implementacionCompu"/>
+    <fullyQualifiedTypeName name="Implementacion.implementacionGenerica"/>
+</qualifiedTypeNameHistroy>

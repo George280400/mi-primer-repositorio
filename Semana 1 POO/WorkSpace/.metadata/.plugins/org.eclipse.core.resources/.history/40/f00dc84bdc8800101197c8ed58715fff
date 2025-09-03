@@ -1,0 +1,15 @@
+package com.mx.Libro;
+
+public class Libro {
+	
+	private String nombre; //clave
+	private String autor;
+	private String editorial;
+	private String genero;
+	private double precio;
+	
+	public Libro() {
+		
+	}
+
+}

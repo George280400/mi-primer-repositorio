@@ -1,0 +1,247 @@
+package com.mx.Moto;
+
+import java.util.InputMismatchException;
+import java.util.Iterator;
+import java.util.Scanner;
+
+
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//instanciar el objeto
+				Moto motol = new Moto("italika", "roja",  22000, 5);
+				Moto moto2 = new Moto("vento", "negra",  18000, 4);
+				Moto moto3 = new Moto("suzuki", "blanca",  40000, 5);
+				Moto moto4 = new Moto("pulsar", "azul",  60000, 6);
+				
+				//objeto auxiliar
+				Moto moto = null;
+				
+				//instanciar implementacion para poder usar sus metods declarados
+				
+				Implementacion imp = new Implementacion();
+				
+				//agregar elementos a la lista
+				imp.guardar(motol);
+				imp.guardar(moto2);
+				imp.guardar(moto3);
+				imp.guardar(moto4);
+				//mostrar
+				/*
+				 * imp.mostrar();
+				 * 
+				 * //buscar moto = imp.buscar(0); System.out.println(moto);
+				 * 
+				 * //editar moto = imp.buscar(1); moto.setPrecio(20000); imp.editar(1, moto);
+				 * imp.mostrar();
+				 * 
+				 * //eliminar imp.eliminar(0); imp.mostrar();
+				 * 
+				 * //metodo personalizado imp.contar();
+				 */
+				//decalracion de variables
+				
+				Scanner datos = new Scanner(System.in);
+				int menuP = 0, menuS = 0, indice = 0;
+				
+				//variables locales
+				String marca, color;
+				int precio, marchas;
+				
+				do {
+					System.out.println("---MENU---");
+					System.out.println("1 ALTA");
+					System.out.println("2 MOSTRAR");
+					System.out.println("3 EDITAR");
+					System.out.println("4 ELIMINAR POR MARCA");  
+					System.out.println("5 BUSCAR POR MARCA");
+					System.out.println("6 CONTAR");
+					System.out.println("7 SALIR");
+					System.out.println("--- ELIGE UNA OPCION DENTRO DEL MENU---");
+					
+					//try-catch es para evitar que el programa se detenga cuando el usuario introduzca un caracter no numerico
+					try {
+						menuP = datos.nextInt();
+						datos.nextLine();
+						
+						//inicio del bloque switch
+						
+						switch(menuP) {
+						case 1: System.out.println("<<<<<<<<Entro al espacio de dar de alta>>>>>");
+						System.out.println("llena los sigueintes datos sobre la moto");
+						
+						System.out.println("MARCA");
+						marca = datos.nextLine();
+						
+						System.out.println("COLOR");
+						color = datos.nextLine();
+						
+						System.out.println("PRECIO");
+						precio = datos.nextInt();
+					    datos.nextLine();
+					    
+						System.out.println("MARCHAS");
+						marchas = datos.nextInt();
+						
+						moto = new Moto(marca, color, precio, marchas);
+						imp.guardar(moto);
+						System.out.println("la moto" + moto.getMarca() + " se guardo con exito");
+						break;
+						
+						case 2:
+							System.out.println("<<<<<MOSTRAR>>>>>");
+							if(imp.lista.size() > 0) {
+								imp.mostrar();
+							}else {
+								System.out.println("no hay registros en esta lista");	
+							}
+							break;
+						case 3: 
+							System.out.println("<<<<<EDITAR>>>>>>");
+							imprimirDatos(imp);
+							if(imp.lista.size() > 0) {
+								System.out.println("indique el indice que desea editar");
+								indice = datos.nextInt();
+								datos.nextLine();
+								
+								if (indice >= 0 && indice < imp.lista.size()) {
+									do {
+										
+										System.out.println("---MENU DE EDITAR---");
+										System.out.println("1 editar marca");
+										System.out.println("2 editar color");
+										System.out.println("3 editar precio");
+										System.out.println("4 editar marchas");
+										System.out.println("5 regresar al menu principal");
+										
+										menuS = datos.nextInt();
+										datos.nextLine();
+										moto = imp.buscar(indice);
+										
+										switch (menuS) {
+										case 1:
+											System.out.println("ingresa la nueva marca");
+											marca = datos.nextLine();
+											moto.setMarca(marca);
+											break;
+
+										case 2:
+											System.out.println("ingresa el nuevo color");
+											color = datos.nextLine();
+											moto.setColor(color);
+											break;
+										case 3:
+											System.out.println("ingresa el nuevo precio");
+											precio = datos.nextInt();
+											moto.setPrecio(precio);
+											break;
+
+										case 4:
+											System.out.println("ingresa la nueva cantidad de marchas");
+											marchas = datos.nextInt();
+											moto.setMarchas(marchas);
+											break;
+										case 5:
+											System.out.println("regresando al menu principal");
+											break;
+											default:
+												System.out.println("indice fuera de rango prueba con otro");
+												break;
+										}
+										System.out.println("edicion exitosa");
+										
+									}while(menuS != 7);
+								}else {
+									System.out.println("indice fuera de rango prueba con otro dentro del listado");
+								}
+								
+							}
+							break;
+						case 4:
+							System.out.println("<<<<<ELIMINAR POR MARCA>>>>>");
+						    if (imp.lista.size() > 0) {
+						        System.out.println("Ingresa la marca dela moto a eliminar:");
+						        marca = datos.nextLine();
+						        boolean eliminado = false;
+
+						        // Usamos un iterador para evitar errores al eliminar durante el recorrido
+						        Iterator<Moto> it = imp.lista.iterator();
+						        while (it.hasNext()) {
+						            Moto c = it.next();
+						            if (c.getMarca().equalsIgnoreCase(marca)) {
+						                it.remove(); 
+						                System.out.println("Se eliminó la moto de marca: " + marca);
+						                eliminado = true;
+						                break; 
+						            }
+						        }
+
+						        if (!eliminado) {
+						            System.out.println("No se encontró ninguna moto con la marca: " + marca);
+						        }
+						    } else {
+						        System.out.println("No hay registros en la lista");
+						    }
+						    break;
+						case 5:
+							 System.out.println("<<<<<BUSCAR POR MARCA>>>>>");
+							    if (imp.lista.size() > 0) {
+							        System.out.println("Ingresa la marca de la moto a buscar:");
+							        marca = datos.nextLine();
+							        boolean encontrado = false;
+
+							        for (Moto c : imp.lista) {
+							            if (c.getMarca().equalsIgnoreCase(marca)) {
+							                System.out.println("Moto encontrada: " + c);
+							                encontrado = true;
+							            }
+							        }
+
+							        if (!encontrado) {
+							            System.out.println("No se encontró ninguna moto con la marca: " + marca);
+							        }
+							    } else {
+							        System.out.println("No hay registros en la lista");
+							    }
+							    break;
+							
+						case 6:
+							System.out.println("<<<<<CONTAR>>>>");
+							imp.contar();
+							break;
+						case 7:
+							System.out.println("saliendo del menu, vuelve pronto");
+							break;
+							default:
+								System.out.println("indice fuera de rango intenta con uno dentro del menu");
+								break;
+							
+						}
+					}catch(InputMismatchException e) {
+						System.out.println("Entrada invalida por favor ingrese un numero" );
+						datos.nextLine();
+						
+					}
+					
+				}while(menuP !=7);
+				
+
+			}
+			
+			private static void imprimirDatos(Implementacion imp) {
+				System.out.println("celulares registrados");
+				
+				if(imp.lista.size()>0) {
+					for(int i=0; i< imp.lista.size(); i++) {
+						System.out.println("el celular:" + i + " de marca" + imp.lista.get(i).getMarca());
+					}
+				} else {
+					System.out.println("No hay celulares registrados");
+				}
+
+	}
+
+}

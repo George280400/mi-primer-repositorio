@@ -1,0 +1,54 @@
+package Implementacion;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Principal.IMetodos;
+
+
+
+
+
+public class implementacionGenerica implements IMetodos{
+
+	//declarar lista
+	List<Object> lista = new ArrayList<Object>();
+
+	@Override
+	public void guardar(Object Object) {
+		
+		lista.add(Object);
+	}
+
+	@Override
+	public Object buscar(int indice, Object Object) {
+		
+		return null;
+	}
+
+	@Override
+	public void editar(int indice, Object Object) {
+		
+		lista.set(indice, Object);
+		
+	}
+
+	@Override
+	public void eliminar(int indice, Object Object) {
+		
+		lista.remove(indice);
+	}
+
+	@Override
+	public void mostrar() {
+		System.out.println(lista);
+		
+	}
+	
+	//metod personalizado contar
+	
+		public void contar() {
+			int contador = lista.size();
+			System.out.println("La lista contiene" + contador + " celulares registrados");
+		}
+}

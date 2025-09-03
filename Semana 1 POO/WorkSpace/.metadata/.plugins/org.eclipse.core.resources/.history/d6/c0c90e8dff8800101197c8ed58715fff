@@ -1,0 +1,41 @@
+package Principal;
+
+import Entidades.Carro;
+
+import Implementacion.implementacionCarro;
+import Implementacion.implementacionMoto;
+import Implementacion.implementacionPersona;
+
+public class Principal {
+	
+	 public static void main(String[] args) {
+	
+	Carro carro1 = new Carro("Volskwagen", "Jetta", "Gasolina", "Rojo");
+	Carro carro2 = new Carro("Nissan", "tsuru", "gasolina", "azul");
+	Carro carro3 = new Carro("Toyota", "corolla", "gasolina", "verde");
+	Carro carro4 = new Carro("Chevrolet", "spark", "gasolina", "blanco");
+	Carro carro5 = new Carro("dodge", "neon", "diesel", "negro");
+	
+	// Objeto auxiliar
+    Carro car = null;
+    
+    
+ // Implementación
+    implementacionCarro impC = new implementacionCarro();
+    implementacionMoto impM = new implementacionMoto();
+    implementacionPersona impP = new  implementacionPersona();
+    
+    impC.guardar(carro1);
+    impC.guardar(carro2);
+    impC.guardar(carro3);
+    impC.guardar(carro4);
+    impC.guardar(carro5);
+
+    // Mostrar
+    impC.mostrar();
+    
+	 }
+    
+
+}
+

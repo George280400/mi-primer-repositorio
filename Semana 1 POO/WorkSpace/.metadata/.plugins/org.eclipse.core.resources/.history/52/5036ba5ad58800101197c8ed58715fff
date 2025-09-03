@@ -1,0 +1,37 @@
+package com.mx.Empleado;
+
+public class Implementacion implements IMetodos{
+
+	@Override
+	public void guardar(Empleado empleado) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Empleado buscar(Empleado empleado) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void editar(Empleado empleado) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eliminar(Empleado empleado) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mostrar() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}

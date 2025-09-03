@@ -1,0 +1,63 @@
+package Principal;
+
+
+
+import Entidades.Carro;
+import Entidades.Persona;
+
+import Implementacion.implementacionCarro;
+import Implementacion.implementacionMoto;
+import Implementacion.implementacionPersona;
+
+public class Principal {
+	
+	 public static void main(String[] args) {
+	
+	Carro carro1 = new Carro("Volskwagen", "Jetta", "Gasolina", "Rojo");
+	Carro carro2 = new Carro("Nissan", "tsuru", "gasolina", "azul");
+	Carro carro3 = new Carro("Toyota", "corolla", "gasolina", "verde");
+	Carro carro4 = new Carro("Chevrolet", "spark", "gasolina", "blanco");
+	Carro carro5 = new Carro("dodge", "neon", "diesel", "negro");
+	
+	Persona gente1 = new Persona("Raul", "Jimenez", 25, "Mexicana");
+	Persona gente2 = new Persona("Jorge", "Guzman", 26, "Mexicana");
+	Persona gente3 = new Persona("Carlos", "Carrera", 27, "Mexicana");
+	Persona gente4 = new Persona("Armando", "Mendoza", 28, "Mexicana");
+	Persona gente5 = new Persona("Eduardo", "Garcia", 29, "Mexicana");
+	
+	// Objeto auxiliar
+    Carro car = null;
+    
+    
+ // Implementación
+    implementacionCarro impC = new implementacionCarro();
+    implementacionMoto impM = new implementacionMoto();
+    implementacionPersona impP = new  implementacionPersona();
+    
+    impC.guardar(carro1);
+    impC.guardar(carro2);
+    impC.guardar(carro3);
+    impC.guardar(carro4);
+    impC.guardar(carro5);
+    
+    impP.guardar(gente1);
+    impP.guardar(gente2);
+    impP.guardar(gente3);
+    impP.guardar(gente4);
+    impP.guardar(gente5);
+
+    // Mostrar
+    impC.mostrar();
+    impP.mostrar();
+    
+    //Contar
+    
+    impC.contar();
+    impP.contar();
+    
+    
+	 }
+    
+
+}
+

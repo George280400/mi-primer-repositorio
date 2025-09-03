@@ -1,0 +1,50 @@
+package com.mx.Moto;
+
+import com.mx.Celular.Implementacion;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//instanciar el objeto
+				Moto motol = new Moto("italika", "roja",  22000, 5);
+				Moto moto2 = new Moto("vento", "negra",  18000, 4);
+				Moto moto3 = new Moto("suzuki", "blanca",  40000, 5);
+				Moto moto4 = new Moto("pulsar", "azul",  60000, 6);
+				
+				//objeto auxiliar
+				Moto moto = null;
+				
+				//instanciar implementacion para poder usar sus metods declarados
+				
+				Implementacion imp = new Implementacion();
+				
+				//agregar elementos a la lista
+				imp.guardar(motol);
+				imp.guardar(moto2);
+				imp.guardar(moto3);
+				imp.guardar(moto4);
+				//mostrar
+				imp.mostrar();
+				
+				//buscar
+				moto = imp.buscar(0);
+				System.out.println(moto);
+				
+				//editar
+				moto = imp.buscar(1);
+				moto.setPrecio(20000);
+				imp.editar(1, moto);
+				imp.mostrar();
+				
+				//eliminar
+				imp.eliminar(0);
+				imp.mostrar();
+				
+				//metodo personalizado
+				imp.contar();
+
+	}
+
+}

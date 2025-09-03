@@ -1,0 +1,9 @@
+package Implementacion;
+
+public class implementacionMoto extends implementacionGenerica{
+	
+	public void contar() {
+		System.out.println(lista.size() + " coches registrados  en el HahMap");
+	}
+
+}

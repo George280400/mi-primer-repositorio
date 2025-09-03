@@ -1,0 +1,124 @@
+package com.mx.Persona;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+//respetar el camelcase: es la forma de escribir en java donde las mayusculas hacen la separacion de las palabras
+//las calses no pueden ser creadas en ´lural y deben iniciar con mayuscula
+
+public class Principal {
+	//metodo que hace que compile el programa
+	public static void main(String[]args) {
+		
+		//instanciar el objeto (crear el objeto con los metodos declarados en mi clase persona)
+		//se manda a llamar al clase para darle el valor de esa clase a una variable
+		//utilizo la palabra reservada new, que manda a traer a mi constructor
+		Persona gente1 = new Persona("Raul", "Jimenez", 25, "Mexicana");
+		Persona gente2 = new Persona("Jorge", "Guzman", 26, "Mexicana");
+		Persona gente3 = new Persona("Carlos", "Carrera", 27, "Mexicana");
+		Persona gente4 = new Persona("Armando", "Mendoza", 28, "Mexicana");
+		Persona gente5 = new Persona("Eduardo", "Garcia", 29, "Mexicana");
+		
+		//crear una lista para almacenar los objetos
+		//lista es una estructura de datos
+		//List<Persona> lista = new ArrayList<Persona>();
+		
+		List<Persona> lista = new ArrayList<Persona>();
+		
+		//agregar los objetos a la lista
+		lista.add(gente1);
+		lista.add(gente2);
+		lista.add(gente3);
+		lista.add(gente4);
+		lista.add(gente5);
+		/*
+		 * //mostrar el contenido de la lista System.out.println(lista);
+		 * 
+		 * //crear un auxiliar Persona perso = null; perso = lista.get(0);
+		 * System.out.println(perso);
+		 * 
+		 * //editar un objeto perso = lista.get(2); perso.setNombre("Mariana");
+		 * perso.setEdad(45); System.out.println(perso);
+		 * 
+		 * //eliminar un objeto de la lista lista.remove(4);
+		 * System.out.println("lista actualizada\n" + lista);
+		 * 
+		 * //contar elementos en la lista System.out.println("Existen:" + lista.size() +
+		 * "personas registradas"); // limpiar la lista lista.clear();
+		 * 
+		 * //validar si la lista esta vacia
+		 * 
+		 * if(lista.isEmpty()) { System.out.println("la lista esta vacia"); }else {
+		 * System.out.println("esta es la lista\n" + lista); }
+		 */
+		Persona perso = null;
+		//crear un menu interactivo para manipular la informacion desde consula
+		Scanner scan = null; // se utiliza para leer la entrada de un usuario
+		
+		int menuPrincipal = 0, menuSecundario = 0, indice = 0;
+		//los menus son variables que van a almacenar opciones
+		//el indice va a simular el indice de un objeto
+		
+		//variables locales
+		String nombre, apellido, nacionalidad;
+		int edad;
+		
+		//inicio de el menu interactivo
+		//uso del ciclo do-while: en java es una estructura que permite ejecutar el bloque de codigo almenos una vez y este continua su ejecucion hasta cumplir la condicion
+		
+		do {
+			System.out.println("---MENU---");
+			System.out.println("1 agregar un nuevo registro");
+			System.out.println("2 mostrar la lista");
+			System.out.println("3 editar");
+			System.out.println("4 buscar un elemento en la lista");
+			System.out.println("5 eliminar un elemento");
+			System.out.println("6 contar todos los elementos");
+			System.out.println("7 salir del menu");
+			System.out.println("--- ELIGE UNA OPCION DENTRO DEL MENU---");
+			
+			scan = new Scanner(System.in);
+		    menuPrincipal = scan.nextInt();
+		    
+		    //metodo case o swicth es una estructura de control que permite ejecutar diferentes bloques de codigo
+		    
+		    switch (menuPrincipal) {
+			case 1: {
+				
+				System.out.println("1 agregar un nuevo registro");
+				System.out.println("escriba el nombre de la persona");
+				scan = new Scanner(System.in);
+				nombre = scan.nextLine();
+				
+				System.out.println("escriba el apellido de la persona");
+				scan = new Scanner(System.in);
+				apellido = scan.nextLine();
+				
+				System.out.println("escriba la edad de la persona");
+				scan = new Scanner(System.in);
+				edad = scan.nextInt();
+				scan.nextLine(); //limpieza del buffer
+				
+				System.out.println("escriba la nacionalidad de la persona");
+				scan = new Scanner(System.in);
+				nacionalidad = scan.nextLine();
+				
+				perso = new Persona(nombre, apellido, edad, nacionalidad);
+				
+				//guardar
+				lista.add(perso);
+				System.out.println("el registro se guardo con exito");
+				break; //indica que se rompe el primer case
+			}
+			case 2: {
+				System.out.println("2 mostrar la lista");
+				System.out.println("la informacion de la lista es:\n" + lista);
+				break;
+				}
+		    }
+					
+		}while (menuPrincipal !=7);
+	} //cierra metodo main
+
+} // cierra la clase

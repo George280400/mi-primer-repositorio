@@ -1,0 +1,67 @@
+package com.mx.Carro;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class Principal {
+	
+	//metodo que hace que compile el programa
+		public static void main(String[]args) {
+			
+			//instanciar el objeto (crear el objeto con los metodos declarados en mi clase persona)
+			//se manda a llamar al clase para darle el valor de esa clase a una variable
+			//utilizo la palabra reservada new, que manda a traer a mi constructor
+			Carro carro1 = new Carro("Volskwagen", "Jetta", "Gasolina", "Rojo");
+			Carro carro2 = new Carro("Nissan", "tsuru", "gasolina", "azul");
+			Carro carro3 = new Carro("Toyota", "corolla", "gasolina", "verde");
+			Carro carro4 = new Carro("Chevrolet", "spark", "gasolina", "blanco");
+			Carro carro5 = new Carro("dodge", "neon", "diesel", "negro");
+			
+			//crear una lista para almacenar los objetos
+			//lista es una estructura de datos
+			//List<Persona> lista = new ArrayList<Persona>();
+			
+			List<Carro> lista = new ArrayList<Carro>();
+			
+			//agregar los objetos a la lista
+			lista.add(carro1);
+			lista.add(carro2);
+			lista.add(carro3);
+			lista.add(carro4);
+			lista.add(carro5);
+			//mostrar el contenido de la lista
+			System.out.println(lista);
+			
+			//crear un auxiliar
+			Carro car = null;
+			car = lista.get(0);
+			System.out.println(car);
+			
+			//editar un objeto
+			car = lista.get(2);
+			car.setMarca("cambio");
+			car.setTipo("cambio");
+			System.out.println(car);
+			
+			//eliminar un objeto de la lista
+			lista.remove(4);
+			System.out.println("lista actualizada\n" + lista);
+			
+			//contar elementos en la lista
+			System.out.println("Existen:" + lista.size() + "carros guardados");
+			// limpiar la lista
+			lista.clear();
+			
+			//validar si la lista esta vacia
+			
+			if(lista.isEmpty()) {
+				System.out.println("la lista esta vacia");
+			}else {
+				System.out.println("esta es la lista\n" + lista);
+			}
+			
+		}
+
+}

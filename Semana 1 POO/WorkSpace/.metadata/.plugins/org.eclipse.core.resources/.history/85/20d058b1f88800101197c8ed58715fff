@@ -1,0 +1,14 @@
+package Implementacion;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+
+
+public class implementacionGenerica implements IMetodos{
+
+	//declarar lista
+	List<Object> lista = new ArrayList<Object>();
+}

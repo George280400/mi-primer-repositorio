@@ -1,0 +1,15 @@
+package Entidades;
+
+public class Moto {
+	
+	private String marca;
+	private String color;
+	private int precio;
+	private int marchas;
+	
+	public Moto()
+	{
+		
+	}
+
+}

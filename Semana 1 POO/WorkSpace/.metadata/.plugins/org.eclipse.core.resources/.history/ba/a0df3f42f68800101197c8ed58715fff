@@ -1,0 +1,16 @@
+package Entidades;
+
+public class Carro {
+	
+	private String marca;
+	private String modelo;
+	private String tipo;
+	private String color;
+	
+
+	
+	public Carro() {
+		
+	}
+
+}

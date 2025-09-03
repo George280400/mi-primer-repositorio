@@ -1,0 +1,16 @@
+package com.mx.Moto;
+
+public class Moto {
+	
+	private String marca;
+	private String color;
+	private String procesador;
+	private int precio;
+	private int marchas;
+	
+	public Moto()
+	{
+		
+	}
+
+}

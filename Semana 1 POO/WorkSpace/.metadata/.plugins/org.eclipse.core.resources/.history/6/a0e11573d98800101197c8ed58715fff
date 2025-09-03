@@ -1,0 +1,35 @@
+package com.mx.Empleado;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		//instancia del objeto
+		Empleado e1 = new Empleado("jesus", "diaz", 30, 652123478, "Administrativo", "Finanzas", 6500.00);
+		Empleado e2 = new Empleado("jorge", "contreas", 25, 238123478, "Programador", "TI", 7500.00);
+		Empleado e3 = new Empleado("Pepe","Blanco",25,23811998,"CEO","Redes",8920.80);
+		Empleado e4 = new Empleado("Cesar", "Martinez", 24, 551978773, "Programador Jr.", "Desarrollo", 7999.99);
+		Empleado e5 = new Empleado("Sergio","Covarrubias",38, 656324785,"Auxiliar.comtable","finanzas",8500.90);
+		
+		//objeto auxiliar
+		Empleado emp = null;
+		
+		//implementacion
+		
+		Implementacion imp = new Implementacion();
+		
+		imp.guardar(e1);
+		imp.guardar(e2);
+		imp.guardar(e3);
+		imp.guardar(e4);
+		imp.guardar(e5);
+		
+		//mostrar
+		imp.mostrar();
+		
+		//buscar
+		emp = new Empleado("jorge");
+		emp = imp.buscar(emp);
+	}
+
+}

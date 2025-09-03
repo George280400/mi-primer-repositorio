@@ -1,0 +1,32 @@
+package com.mx.Celular;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub,
+		
+		//instanciar el objeto
+		Celular cell = new Celular("Motorola", "motog6", "negro", 52147891, "octacore", 2300);
+		Celular cel2 = new Celular("Infinix","Note35","Negro",631330890,"Mediatek",4050);
+		Celular cel3 = new Celular("Huawei", "P40", "GRIS", 52144561, "octacore", 2300);
+		Celular cel4 = new Celular("Xiaomi", "Redmi Note 14", "Blanco", 5623124, "Snapdragon", 7500);
+		
+		//objeto auxiliar
+		Celular celu = null;
+		
+		//instanciar implementacion para poder usar sus metods declarados
+		
+		Implementacion imp = new Implementacion();
+		
+		//agregar elementos a la lista
+		imp.guardar(cell);
+		imp.guardar(cel2);
+		imp.guardar(cel3);
+		imp.guardar(cel4);
+		
+		imp.mostrar();
+		
+
+	}
+
+}
