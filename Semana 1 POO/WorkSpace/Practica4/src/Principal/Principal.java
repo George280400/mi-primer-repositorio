@@ -36,29 +36,45 @@ public class Principal {
     implementacionCarro impC = new implementacionCarro();
     implementacionMoto impM = new implementacionMoto();
     implementacionPersona impP = new  implementacionPersona();
-    
+    System.out.println("G U A R D A R   C A R R O S");
     impC.guardar(carro1);
     impC.guardar(carro2);
     impC.guardar(carro3);
     impC.guardar(carro4);
     impC.guardar(carro5);
+    impC.mostrar();
     
+  //Eliminar
+    System.out.println("E L I M I N A R   C A R R O S");
+    impC.eliminar(carro1);
+    impC.eliminar(carro2);
+    impC.eliminar(carro3);
+    impC.mostrar();
+    
+
+
+    // Mostrar
+
+    impC.contar();
+    
+
+    System.out.println("G U A R D A R   G E N T E");
     impP.guardar(gente1);
     impP.guardar(gente2);
     impP.guardar(gente3);
     impP.guardar(gente4);
     impP.guardar(gente5);
-
-    // Mostrar
-    impC.mostrar();
-    impC.contar();
-    
     impP.mostrar();
-    impP.contar();
     
- 
+  //Eliminar
+    System.out.println("E L I M I N A R   G E N T E");
+    impP.eliminar(gente1);
+    impP.eliminar(gente2);
+    impP.eliminar(gente3);
+    impP.mostrar();
+	 
 
-    
+    impP.contar();
     
     
     

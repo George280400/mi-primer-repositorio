@@ -15,4 +15,13 @@
     <fullyQualifiedTypeName name="com.mx.Entidades.Computadora"/>
     <fullyQualifiedTypeName name="Implementacion.implementacionCompu"/>
     <fullyQualifiedTypeName name="Implementacion.implementacionGenerica"/>
+    <fullyQualifiedTypeName name="Entidades.Moto"/>
+    <fullyQualifiedTypeName name="com.mx.Herencia.Hijo"/>
+    <fullyQualifiedTypeName name="com.mx.Herencia.Perrito"/>
+    <fullyQualifiedTypeName name="Entidades.Profesionista"/>
+    <fullyQualifiedTypeName name="Entidades.Medico"/>
+    <fullyQualifiedTypeName name="Entidades.Abogado"/>
+    <fullyQualifiedTypeName name="Entidades.Primaria"/>
+    <fullyQualifiedTypeName name="com.mx.Pelicula.Pelicula"/>
+    <fullyQualifiedTypeName name="com.mx.Pelicula.SerieDocumental"/>
 </qualifiedTypeNameHistroy>

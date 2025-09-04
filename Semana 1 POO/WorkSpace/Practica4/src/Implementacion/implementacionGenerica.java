@@ -34,9 +34,9 @@ public class implementacionGenerica implements IMetodos{
 	}
 
 	@Override
-	public void eliminar(int indice, Object Object) {
+	public void eliminar( Object key) {
 		
-		lista.remove(indice);
+		lista.remove(key);
 	}
 
 	@Override
