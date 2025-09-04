@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Ejercicio4 {
+module Ejercicio6 {
 }

@@ -1,2 +1,3 @@
-2025/09/01-09:05:53.960 11c0 Creating DB C:\Users\jch12\OneDrive\Escritorio\Curso\Semana 1 POO\WorkSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb since it was missing.
-2025/09/01-09:05:54.015 11c0 Reusing MANIFEST C:\Users\jch12\OneDrive\Escritorio\Curso\Semana 1 POO\WorkSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/09/03-16:08:22.254 2db8 Reusing MANIFEST C:\Users\jch12\OneDrive\Escritorio\Curso\Semana 1 POO\WorkSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/09/03-16:08:22.260 2db8 Recovering log #3
+2025/09/03-16:08:22.263 2db8 Reusing old log C:\Users\jch12\OneDrive\Escritorio\Curso\Semana 1 POO\WorkSpace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 

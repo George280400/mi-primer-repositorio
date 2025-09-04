@@ -1,13 +1,8 @@
 package Principal;
 
-
-
-
-
-import com.mx.Libro.Libro;
-
 import Entidades.Carro;
 import Entidades.Persona;
+import Entidades.Moto;
 
 
 import Implementacion.implementacionCarro;
@@ -30,13 +25,14 @@ public class Principal {
 	Persona gente4 = new Persona("Armando", "Mendoza", 28, "Mexicana");
 	Persona gente5 = new Persona("Eduardo", "Garcia", 29, "Mexicana");
 	
-	// Objeto auxiliar
+	// ObjetoS auxiliarES
     Carro car = null;
-  //objeto auxiliar
 	Persona per = null;
+	Moto mot = null;
     
     
  // Implementación
+	
     implementacionCarro impC = new implementacionCarro();
     implementacionMoto impM = new implementacionMoto();
     implementacionPersona impP = new  implementacionPersona();
@@ -60,11 +56,7 @@ public class Principal {
     impP.mostrar();
     impP.contar();
     
-    //Contar
-    
-    //buscar
-  //buscar
-  //buscar
+ 
 
     
     
