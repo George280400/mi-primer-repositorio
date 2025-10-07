@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="com.mx.Persona.Persona"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.mx.Celular.Implementacion"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
@@ -24,4 +23,19 @@
     <fullyQualifiedTypeName name="Entidades.Primaria"/>
     <fullyQualifiedTypeName name="com.mx.Pelicula.Pelicula"/>
     <fullyQualifiedTypeName name="com.mx.Pelicula.SerieDocumental"/>
+    <fullyQualifiedTypeName name="Entidades.Automovil"/>
+    <fullyQualifiedTypeName name="Entidades.Deportivo"/>
+    <fullyQualifiedTypeName name="Entidades.Turismo"/>
+    <fullyQualifiedTypeName name="Entidades.PickUp"/>
+    <fullyQualifiedTypeName name="Entidades.Animal"/>
+    <fullyQualifiedTypeName name="Entidades.Perro"/>
+    <fullyQualifiedTypeName name="Entidades.Gato"/>
+    <fullyQualifiedTypeName name="Entidades.Gallo"/>
+    <fullyQualifiedTypeName name="EstadisticosyConstantes.Principal"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="Entidad.Alumno"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Examen.Entregable"/>
+    <fullyQualifiedTypeName name="Examen.Serie"/>
+    <fullyQualifiedTypeName name="Examen.Videojuego"/>
 </qualifiedTypeNameHistroy>

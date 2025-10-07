@@ -1,6 +1,6 @@
 package com.mx.Pelicula;
 
-public class SerieDocumental {
+public class SerieDocumental implements IMetodos{
 	
 	private String titulo;
 	private int noEpisodios = 5;
@@ -63,20 +63,28 @@ public class SerieDocumental {
 		return "SerieDocumental [titulo=" + titulo + ", noEpisodios=" + noEpisodios + ", disponible=" + disponible
 				+ ", categoria=" + categoria + ", productor=" + productor + "]";
 	}
-	
+
+	@Override
 	public void ocupar() {
-        this.disponible = false;
-    }
+		
+		this.disponible = false;
+		
+	}
 
-    
-    public void liberar() {
-        this.disponible = true;
-    }
+	@Override
+	public void liberar() {
+		
+		this.disponible = true;
+		
+	}
 
-    
-    public boolean isDisponible() {
-        return this.disponible;
-    }
+	@Override
+	public boolean isDisponible() {
+		
+		return this.disponible;
+	}
+	
+	
 	
 	
 	
