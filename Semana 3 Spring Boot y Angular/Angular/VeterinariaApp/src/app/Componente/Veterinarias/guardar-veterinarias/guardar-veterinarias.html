@@ -1,0 +1,49 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Nueva Veterinaria</h2>
+        </div>
+        <div class="card-body">
+            <p>Ingresa los datos de la nueva veterinaria</p>
+            <form>
+                <!-- Nombre -->
+                <div class="form-group mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="nombre" 
+                        placeholder="Ej: Clínica Animal Feliz" 
+                        [(ngModel)]="veterinaria.nombre">
+                </div>
+
+                <!-- Dirección -->
+                <div class="form-group mb-3">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="direccion" 
+                        placeholder="Ej: Av. Siempre Viva #123" 
+                        [(ngModel)]="veterinaria.direccion">
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        name="telefono" 
+                        placeholder="Ej: 2221234567" 
+                        [(ngModel)]="veterinaria.telefono">
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-success" (click)="guardarV()">GUARDAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

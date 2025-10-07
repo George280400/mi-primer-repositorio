@@ -1,0 +1,54 @@
+-- CREACION TABLA ROLES
+CREATE TABLE Rol (
+    ID_ROL      NUMBER         PRIMARY KEY,
+    PRIVILEGIO  NVARCHAR2(50)
+);
+
+--CREACION TABLA USUARIOS
+CREATE TABLE Usuario (
+    ID_USUARIO       NUMBER         PRIMARY KEY,
+    NOMBRE           NVARCHAR2(100),
+    APP              NVARCHAR2(50),
+    APM              NVARCHAR2(50),
+    SEXO             NVARCHAR2(25),
+    CORREO           NVARCHAR2(100) NOT NULL,
+    FECHA_NACIMIENTO DATE,
+    FECHA_CREACION   DATE,
+    ROL_ID           NUMBER,
+    CONSTRAINT FK_ROL_ID FOREIGN KEY (ROL_ID) REFERENCES Rol(ID_ROL)
+);
+
+-- INSERTS  CURSO_ROLES
+INSERT INTO ROL (ID_ROL, PRIVILEGIO) VALUES (1, 'Administrador');
+INSERT INTO ROL (ID_ROL, PRIVILEGIO) VALUES (2, 'Editor');
+INSERT INTO ROL (ID_ROL, PRIVILEGIO) VALUES (3, 'Consultor');
+INSERT INTO ROL (ID_ROL, PRIVILEGIO) VALUES (4, 'Invitado');
+commit;
+
+-- INSERTS  CURSO_USUARIOS
+INSERT INTO USUARIO 
+(ID_USUARIO, NOMBRE, APP, APM, SEXO, CORREO, FECHA_NACIMIENTO, FECHA_CREACION, ROL_ID)
+VALUES 
+(1, 'Juan', 'Pérez', 'Gómez', 'Masculino', 'juan.perez@enucom.com.mx', TO_DATE('1990-05-15', 'YYYY-MM-DD'), SYSDATE, 1);
+
+INSERT INTO USUARIO 
+(ID_USUARIO, NOMBRE, APP, APM, SEXO, CORREO, FECHA_NACIMIENTO, FECHA_CREACION, ROL_ID)
+VALUES 
+(2, 'María', 'López', 'Hernández', 'Femenino', 'maria.lopez@enucom.com.mx', TO_DATE('1985-08-23', 'YYYY-MM-DD'), SYSDATE, 2);
+
+INSERT INTO USUARIO 
+(ID_USUARIO, NOMBRE, APP, APM, SEXO, CORREO, FECHA_NACIMIENTO, FECHA_CREACION, ROL_ID)
+VALUES 
+(3, 'Carlos', 'Ramírez', 'Torres', 'Masculino', 'carlos.ramirez@enucom.com.mx', TO_DATE('1992-12-10', 'YYYY-MM-DD'), SYSDATE, 3);
+
+INSERT INTO USUARIO 
+(ID_USUARIO, NOMBRE, APP, APM, SEXO, CORREO, FECHA_NACIMIENTO, FECHA_CREACION, ROL_ID)
+VALUES 
+(4, 'Ana', 'Martínez', 'Flores', 'Femenino', 'ana.martinez@enucom.com.mx', TO_DATE('1995-03-05', 'YYYY-MM-DD'), SYSDATE, 4);
+commit;
+
+select * from ROL;
+select * from USUARIO;
+delete from rol where id_rol = 5;
+
+

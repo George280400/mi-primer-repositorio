@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card">
+        <div class="car-header">
+            <h2>Nuevo Hijo</h2>
+        </div>
+        <div class="card-body">
+            <th>Ingresa los datos del nuevo Hijo</th>
+            <form>
+                <!--ngModel es una directiva en Angular que proporciona un enlace Bidreccional entre elementos de un formulario HTML-->
+                <div class=form-group>
+                    <label for=idHijo class="form-label">ID HIJO</label>
+                    <input type=number class="form-control" name="idHijo" placeholder="Eje : 1, 30, 2000" [(ngModel)]="hijo.idHijo" >
+                </div>
+                <div class=form-group>
+                    <label for=nombre class="form-label">NOMBRE</label>
+                    <input type=text class="form-control" name="nombre" placeholder="Eje : Martin" [(ngModel)]="hijo.nombre">
+                </div>
+
+                <div class=form-group>
+                    <label for=apellido class="form-label">APELLIDO</label>
+                    <input type=text class="form-control" name="apellido" placeholder="Eje : Contreras" [(ngModel)]="hijo.apellido">
+                </div>
+
+                <div class=form-group>
+                    <label for=edad class="form-label">EDAD</label>
+                    <input type=number class="form-control" name="edad" placeholder="Eje : 12" [(ngModel)]="hijo.edad">
+                </div>
+
+                <div class=form-group>
+                    <label for=hobbie class="form-label">HOBBIE</label>
+                    <input type=text class="form-control" name="hobbie" placeholder="Eje : Jugar Videojuegos" [(ngModel)]="hijo.hobbie">
+                </div>
+                <!-- recibe el id del padre con la variable indefinida identificador -->
+                <div class=form-group>
+                    <label for=padreId class="form-label">PADRE</label>
+                    <input type=text class="form-control" name="padreId" placeholder="Eje : 1, 5, 10" [(ngModel)]="identificador">
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success" (click)="guardarHijo()">GUARDAR</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+

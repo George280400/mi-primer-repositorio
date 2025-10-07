@@ -1,0 +1,18 @@
+<h2>Registrar Transacción</h2>
+
+<div>
+  <label>Operación:</label>
+  <input [(ngModel)]="operacion">
+</div>
+
+<div>
+  <label>Importe:</label>
+  <input [(ngModel)]="importe">
+</div>
+
+<div>
+  <label>Cliente:</label>
+  <input [(ngModel)]="cliente">
+</div>
+
+<button (click)="enviar()">Enviar</button>

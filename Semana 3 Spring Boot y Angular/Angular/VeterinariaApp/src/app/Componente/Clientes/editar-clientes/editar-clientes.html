@@ -1,0 +1,54 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h2>Editar Cliente</h2>
+    </div>
+    <div class="card-body">
+      <p>Ingresa los nuevos datos del cliente</p>
+
+      <form>
+        <!-- Nombre -->
+        <div class="form-group mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nombre"
+            placeholder="Ej: Juan Pérez"
+            [(ngModel)]="cliente.nombre">
+        </div>
+
+        <!-- Dirección -->
+        <div class="form-group mb-3">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input
+            type="text"
+            class="form-control"
+            name="direccion"
+            placeholder="Ej: Av. Reforma #123, Puebla"
+            [(ngModel)]="cliente.direccion">
+        </div>
+
+        <!-- Contacto -->
+        <div class="form-group mb-3">
+          <label for="contacto" class="form-label">Contacto</label>
+          <input
+            type="number"
+            class="form-control"
+            name="contacto"
+            placeholder="Ej: 2223456789"
+            [(ngModel)]="cliente.contacto">
+        </div>
+
+        <!-- Botón Guardar -->
+        <div class="text-end">
+          <button type="button" class="btn btn-success" (click)="editarCliente()">
+            GUARDAR
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

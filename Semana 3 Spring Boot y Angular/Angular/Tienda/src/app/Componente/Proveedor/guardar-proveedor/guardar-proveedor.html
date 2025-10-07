@@ -1,0 +1,60 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h2>Nuevo Proveedor</h2>
+    </div>
+    <div class="card-body">
+      <p>Ingresa los datos del nuevo proveedor</p>
+      <form>
+        <!--
+        <div class="form-group mb-3">
+          <label for="idProveedor" class="form-label">ID Proveedor</label>
+          <input 
+            type="number" 
+            class="form-control" 
+            name="idProveedor" 
+            placeholder="Ej: 1" 
+            [(ngModel)]="proveedor.idProveedor" disabled>
+        </div>
+        -->
+
+        <!-- Nombre -->
+        <div class="form-group mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            name="nombre" 
+            placeholder="Ej: Distribuidora XYZ" 
+            [(ngModel)]="proveedor.nombre">
+        </div>
+
+        <!-- Teléfono -->
+        <div class="form-group mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            name="telefono" 
+            placeholder="Ej: 555-123-4567" 
+            [(ngModel)]="proveedor.telefono">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input 
+            type="email" 
+            class="form-control" 
+            name="email" 
+            placeholder="Ej: contacto@xyz.com" 
+            [(ngModel)]="proveedor.email">
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-success" (click)="guardarPR()">GUARDAR</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

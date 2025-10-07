@@ -1,0 +1,55 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Editar Mascota</h2>
+        </div>
+        <div class="card-body">
+            <p>Ingresa los nuevos datos de la mascota</p>
+            <form>
+                <!-- Nombre -->
+                <div class="form-group mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Ej: Fido, Luna" [(ngModel)]="mascota.nombre">
+                </div>
+
+                <!-- Raza -->
+                <div class="form-group mb-3">
+                    <label for="raza" class="form-label">Raza</label>
+                    <input type="text" class="form-control" name="raza" placeholder="Ej: Labrador, Siamés" [(ngModel)]="mascota.raza">
+                </div>
+
+                <!-- Edad -->
+                <div class="form-group mb-3">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="number" class="form-control" name="edad" placeholder="Ej: 3" [(ngModel)]="mascota.edad">
+                </div>
+
+                <!-- Cliente -->
+                <div class="form-group mb-3">
+                    <label for="clienteId" class="form-label">Cliente</label>
+                    <select class="form-select" name="clienteId" [(ngModel)]="mascota.clienteId">
+                        <option *ngFor="let cliente of clientes" [value]="cliente.idCliente">
+                            {{cliente.idCliente}} - {{cliente.nombre}}
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Responsable -->
+                <div class="form-group mb-3">
+                    <label for="responsableId" class="form-label">Responsable</label>
+                    <select class="form-select" name="responsableId" [(ngModel)]="mascota.responsableId">
+                        <option *ngFor="let resp of responsables" [value]="resp.idResponsable">
+                            {{resp.idResponsable}} - {{resp.nombre}}
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-success" (click)="editarMascota()">GUARDAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

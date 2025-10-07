@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <div class="car-header">
+            <h2>Editar Rol</h2>
+        </div>
+        <div class="card-body">
+            <th>Ingresa los datos a editar del Rol</th>
+            <form>
+                <!--ngModel es una directiva en Angular que proporciona un enlace Bidreccional entre elementos de un formulario HTML-->
+                <div class=form-group>
+                    <label for=idRol class="form-label">ID ROL</label>
+                    <input type=number class="form-control" name="idRol" placeholder="Eje : 1" [(ngModel)]="rol.idRol" disabled>
+                </div>
+
+                <div class=form-group>
+                    <label for=privilegio class="form-label">PRIVILEGIO</label>
+                    <input type=text class="form-control" name="privilegio" placeholder="Eje : Administrador" [(ngModel)]="rol.privilegio">
+                </div>
+                
+                <div>
+                    <button type="button" class="btn btn-success" (click)="editarRol()">EDITAR</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

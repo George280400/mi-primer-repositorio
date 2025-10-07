@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">Lista de Hijos</div>
+    <div class="card-body">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">APELLIDO</th>
+            <th scope="col">EDAD</th>
+            <th scope="col">HOBBIE</th>
+            <th scope="col">PADRE</th>
+            <th scope="col">OPERACIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (hijo of hijos; track hijo.idHijo) {
+            <tr>
+              <td>{{hijo.idHijo}}</td>
+              <td>{{hijo.nombre}}</td>
+              <td>{{hijo.apellido}}</td>
+              <td>{{hijo.edad}}</td>
+              <td>{{hijo.hobbie}}</td>
+              <!-- sirve para manejador de nulos -->
+              <td>{{hijo.padreId?.nombre}}</td>
+              <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-danger"(click)="eliminarButton(hijo.idHijo)">ELIMINAR</button>
+                  <button type="button" class="btn btn-warning">EDITAR</button>
+                </div>
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="9" style="text-align: center;">
+                No existen registros
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

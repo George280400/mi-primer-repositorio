@@ -1,0 +1,71 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h2>Nuevo Empleado</h2>
+    </div>
+    <div class="card-body">
+      <p>Ingresa los datos del nuevo empleado</p>
+      <form>
+        <!--
+        <div class="form-group mb-3">
+          <label for="idEmpleado" class="form-label">ID Empleado</label>
+          <input 
+            type="number" 
+            class="form-control" 
+            name="idEmpleado" 
+            placeholder="Ej: 1" 
+            [(ngModel)]="empleado.idEmpleado" disabled>
+        </div>
+        -->
+
+        <!-- Nombre -->
+        <div class="form-group mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            name="nombre" 
+            placeholder="Ej: Juan" 
+            [(ngModel)]="empleado.nombre">
+        </div>
+
+        <!-- Apellido -->
+        <div class="form-group mb-3">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            name="apellido" 
+            placeholder="Ej: Pérez" 
+            [(ngModel)]="empleado.apellido">
+        </div>
+
+        <!-- Teléfono -->
+        <div class="form-group mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input 
+            type="number" 
+            class="form-control" 
+            name="telefono" 
+            placeholder="Ej: 5551234567" 
+            [(ngModel)]="empleado.telefono">
+        </div>
+
+        <!-- Puesto -->
+        <div class="form-group mb-3">
+          <label for="puesto" class="form-label">Puesto</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            name="puesto" 
+            placeholder="Ej: Gerente, Vendedor" 
+            [(ngModel)]="empleado.puesto">
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-success" (click)="guardarE()">GUARDAR</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

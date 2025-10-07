@@ -1,0 +1,93 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Editar Venta</h2>
+        </div>
+        <div class="card-body">
+            <p>Ingresa los datos de la nueva venta</p>
+            <form>
+                <!--
+                <div class="form-group mb-3">
+                    <label for="idVenta" class="form-label">ID Venta</label>
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        name="idVenta" 
+                        placeholder="Ej: 1" 
+                        [(ngModel)]="venta.idVenta" disabled>
+                </div>
+                -->
+
+                <!-- Fecha -->
+                <div class="form-group mb-3">
+                    <label for="fecha" class="form-label">Fecha</label>
+                    <input 
+                        type="date" 
+                        class="form-control" 
+                        name="fecha" 
+                        [(ngModel)]="venta.fecha">
+                </div>
+
+                <!-- Cliente -->
+                <div class="form-group mb-3">
+                    <label for="clienteId" class="form-label">Cliente ID</label>
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        name="clienteId" 
+                        placeholder="Ej: 101" 
+                        [(ngModel)]="venta.clienteId">
+                </div>
+
+                <!-- Total -->
+                <div class="form-group mb-3">
+                    <label for="total" class="form-label">Total</label>
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        name="total" 
+                        placeholder="Ej: 1500" 
+                        [(ngModel)]="venta.total">
+                </div>
+
+                <!-- Método de Pago -->
+                <div class="form-group mb-3">
+                    <label for="metodoPago" class="form-label">Método de Pago</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="metodoPago" 
+                        placeholder="Ej: Tarjeta, Efectivo" 
+                        [(ngModel)]="venta.metodoPago">
+                </div>
+
+                <!-- Empleado -->
+                <div class="form-group mb-3">
+                    <label for="empleadoId" class="form-label">Empleado ID</label>
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        name="empleadoId" 
+                        placeholder="Ej: 5" 
+                        [(ngModel)]="venta.empleadoId">
+                </div>
+
+                <!-- Producto -->
+                <div class="form-group mb-3">
+                    <label for="productoId" class="form-label">Producto ID</label>
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        name="productoId" 
+                        placeholder="Ej: 20" 
+                        [(ngModel)]="venta.codigoBarras">
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-success" (click)="editarVenta()">GUARDAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

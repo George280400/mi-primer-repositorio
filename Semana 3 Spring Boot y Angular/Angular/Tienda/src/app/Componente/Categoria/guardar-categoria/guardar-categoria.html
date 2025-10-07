@@ -1,0 +1,48 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Nueva Categoría</h2>
+        </div>
+        <div class="card-body">
+            <p>Ingresa los datos de la nueva categoría</p>
+            <form>
+                <!-- ID Categoría -->
+                <!-- <div class="form-group mb-3">
+                    <label for="idCategoria" class="form-label">ID Categoría</label>
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        name="idCategoria" 
+                        placeholder="Ej: 1" 
+                        [(ngModel)]="categoria.idCategoria" disabled="">
+                </div> -->
+
+                <!-- Nombre -->
+                <div class="form-group mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="nombre" 
+                        placeholder="Ej: Juguetes, Electrónica" 
+                        [(ngModel)]="categoria.nombre">
+                </div>
+
+                <!-- Descripción -->
+                <div class="form-group mb-3">
+                    <label for="descripcion" class="form-label">Descripción</label>
+                    <textarea 
+                        class="form-control" 
+                        name="descripcion" 
+                        rows="3" 
+                        placeholder="Ej: Productos para niños, productos electrónicos"
+                        [(ngModel)]="categoria.descripcion"></textarea>
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-success" (click)="guardarC()">GUARDAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

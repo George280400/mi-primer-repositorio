@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="card">
+        <div class="car-header">
+            <h2>Editar Informacion Usuario</h2>
+        </div>
+        <div class="card-body">
+            <th>Ingresa nuevos datos del Usuario</th>
+            <form>
+                <!--ngModel es una directiva en Angular que proporciona un enlace Bidreccional entre elementos de un formulario HTML-->
+                <div class=form-group>
+                    <label for=idUsuario class="form-label">ID USUARIO</label>
+                    <input type=number class="form-control" name="idUsuario" placeholder="Eje : 1" [(ngModel)]="usuario.idUsuario" >
+                </div>
+                <div class=form-group>
+                    <label for=nombre class="form-label">NOMBRE</label>
+                    <input type=text class="form-control" name="nombre" placeholder="Eje : Martin" [(ngModel)]="usuario.nombre">
+                </div>
+
+                <div class=form-group>
+                    <label for=app class="form-label">APELLIDO PATERNO</label>
+                    <input type=text class="form-control" name="app" placeholder="Eje : Contreras" [(ngModel)]="usuario.app">
+                </div>
+
+                <div class=form-group>
+                    <label for=apm class="form-label">APELLIDO MATERNO</label>
+                    <input type=text class="form-control" name="apm" placeholder="Eje : Mendoza" [(ngModel)]="usuario.apm">
+                </div>
+
+                <div class=form-group>
+                    <label for=sexo class="form-label">SEXO</label>
+                    <input type=text class="form-control" name="sexo" placeholder="Eje : Masculino, Femenino" [(ngModel)]="usuario.sexo">
+                </div>
+
+                <div class=form-group>
+                    <label for=correo class="form-label">CORREO</label>
+                    <input type=text class="form-control" name="correo" placeholder="Eje : juan.perez@enucom.com.mx" [(ngModel)]="usuario.correo" disabled>
+                </div>
+
+                <div class=form-group>
+                    <label for=fechaNacimiento class="form-label">FECHA DE NACIMIENTO</label>
+                    <input type=date class="form-control" name="fechaNacimiento" placeholder="Eje : 1990-05-14" [(ngModel)]="usuario.fechaNacimiento">
+                </div>
+
+                <div class=form-group>
+                    <label for=fechaCreacion class="form-label">FECHA DE CREACION</label>
+                    <input type=date class="form-control" name="fechaCreacion" placeholder="Eje : 2025-09-18" [(ngModel)]="usuario.fechaCreacion">
+                </div>
+
+                <!-- recibe el id del padre con la variable indefinida identificador -->
+                <div class=form-group>
+                    <label for=rolId class="form-label">ROL</label>
+                    <input type=text class="form-control" name="rolId" placeholder="Eje : 1" [(ngModel)]="usuario.rolId.idRol">
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success" (click)="editarUsuario()">EDITAR</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

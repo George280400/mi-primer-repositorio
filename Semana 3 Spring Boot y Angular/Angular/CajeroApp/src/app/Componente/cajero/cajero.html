@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="card shadow-lg p-4">
+    <h2 class="text-center mb-4"> Simulador de Cajero Automático</h2>
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" [(ngModel)]="monto" placeholder="Monto a retirar">
+      <button class="btn btn-primary" (click)="retirar()">Retirar</button>
+    </div>
+
+    <!-- mensaje de error solo aparece si hay un error -->
+    <div *ngIf="errorMsg" class="alert alert-danger text-center">
+       {{ errorMsg }}
+    </div>
+
+    <!-- recorre el objeto del resultado key = denominacion valor = cantidad -->
+    <div *ngIf="resultado" class="mt-3">
+      <h4>Desglose del Retiro:</h4>
+      <ul class="list-group">
+        <li *ngFor="let entry of resultado | keyvalue" class="list-group-item d-flex justify-content-between align-items-center">
+          ${{ entry.key }}
+          <span class="badge bg-success rounded-pill">{{ entry.value }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

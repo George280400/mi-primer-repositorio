@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">Lista de Carros</div>
+    <div class="card-body">
+      <table class="table table-success table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">MARCA</th>
+            <th scope="col">MODELO</th>
+            <th scope="col">ANIO</th>
+            <th scope="col">COLOR</th>
+            <th scope="col">MOTOR</th>
+            <th scope="col">TRANSMICION</th>
+            <th scope="col">PRECIO</th>
+            <th scope="col">OPERACIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (carro of carros; track carro.idCarro) {
+            <tr>
+              <td>{{carro.idCarro}}</td>
+              <td>{{carro.marca}}</td>
+              <td>{{carro.modelo}}</td>
+              <td>{{carro.anio}}</td>
+              <td>{{carro.color}}</td>
+              <td>{{carro.motor}}</td>
+              <td>{{carro.transmision}}</td>
+              <td>{{carro.precio}}</td>
+              <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-danger" (click)="eliminarButton(carro)">ELIMINAR</button>
+                  <button type="button" class="btn btn-warning"(click)="editarButton(carro)">EDITAR</button>
+                </div>
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="9" style="text-align: center;">
+                No existen registros
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
